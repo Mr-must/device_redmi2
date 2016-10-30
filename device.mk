@@ -118,11 +118,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8916
 
-# IMS
-PRODUCT_PACKAGES += \
-    IMSEnabler \
-    init.qti.ims.sh
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
@@ -137,6 +132,16 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
+
+# IMS
+PRODUCT_PACKAGES += \
+    IMSEnabler \
+    init.qti.ims.sh
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ims/imscm.xml:system/etc/permissions/imscm.xml \
+    $(LOCAL_PATH)/configs/ims/qti_permissions.xml:system/etc/permissions/qti_permissions.xml
+
 
 # Keylayout
 PRODUCT_COPY_FILES += \
