@@ -86,6 +86,10 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.sys.sdcardfs=true
 
 # Radio
+DEVICE_PROVISIONED=1
+persist.radio.rat_on=combine
+ril.subscription.types=NV,RUIM
+telephony.lteOnCdmaDevice=1
 persist.data.qmi.adb_logmask=0
 persist.radio.apm_sim_not_pwdn=1
 rild.libargs=-d /dev/smd0
@@ -98,3 +102,18 @@ persist.timed.enable=true
 # WiFi
 ro.disableWifiApFirmwareReload=true
 wifi.interface=wlan0
+
+# IMS
+net.lte.volte_call_capable=true
+persist.ims.enableADBLogs=1
+persist.ims.enableDebugLogs=1
+persist.radio.calls.on.ims=true
+persist.radio.csvt.enabled=false
+persist.radio.jbims=1
+persist.radio.ROTATION_ENABLE=1
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_USE_MDM_TIME=0
+persist.dbg.volte_avail_ovr=1
+persist.volte_enalbed_by_hw=1
+
